@@ -20,7 +20,7 @@ handleSubmit = (event) => {
 
  handleChange = event => {
   this.setState({
-    [event.target.name]: event.target.value
+    [event.target.id]: event.target.value
  });
 }
 
