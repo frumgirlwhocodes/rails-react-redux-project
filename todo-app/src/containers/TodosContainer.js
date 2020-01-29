@@ -1,13 +1,16 @@
 import React, { Component } from 'react'
 import update from 'immutability-helper'
 import CreateTodo from "./components/CreateTodo"
-import { getTodos, createTodo, updateTodo, deleteTodo} from './actions/todosActions'
+import { getTodos} from './actions/todosActions'
+import { createTodo} from './actions/todosActions'
+import {deleteTodo} from './actions/todosActions'
+import {updateTodo} from './actions/todosActions'
 import {connect} from 'react-redux'
  import TodoList from "./components/TodoList"
 
 
 
-class TodosContainer extends Componenet {
+class TodosContainer extends Component {
 
 componentDidMount() {
     this.props.getTodos()
