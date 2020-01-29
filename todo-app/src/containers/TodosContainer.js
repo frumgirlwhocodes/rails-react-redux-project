@@ -18,7 +18,7 @@ componentDidMount() {
     render() {
         return (
           <div className= "container">
-              <CreateTodo  addTodo ={ this.props.addTodo }/>
+              <CreateTodo  addTodo ={ this.props.placeTodo }/>
               <TodoList todos ={this.props.todos} delete={this.props.delete} update = {this.props.update}/>
               </div> 
         )}
@@ -34,7 +34,7 @@ const mapStateToProps = (state) => {
   const mapDispatchToProps = dispatch => {
     return {
       getTodos: () => dispatch(getTodos()),
-      addTodo: (todo) => dispatch(createTodo(todo.title, todo.date)),
+      placeTodo: (todo) => dispatch(createTodo(todo.title, todo.date)),
       delete: id => dispatch(deleteTodo(id)), 
       update: () => dispatch(updateTodo())
     

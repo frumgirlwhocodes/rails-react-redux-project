@@ -8,8 +8,21 @@ this.state = {
   title: '',
   date: ''
 } 
+};
+
+handleSubmit = (event) => {
+   event.preventDefault()
+   this.props.addTodo({
+   title: this.state.title, 
+   date: this.state.date  })
+   
+ }
+
+ handleChange = event => {
+  this.setState({
+    [event.target.name]: event.target.value
+ });
 }
- handleSubmit = event => {}
 
 render() {
 return(
@@ -20,21 +33,24 @@ return(
 
        <input className= "titleInput"
               type= "text"
-              placeholder =" Add a task"
-              maxLength= "60">
+              placeholder ="Add a task"
+              maxLength= "60"
+              value = {this.state.title}
+              onChange= {this.handleChange}
+              />
        
-       </input>
+       <input className= "dateInput"
+              type= "text"
+              placeholder ="date of task"
+              value = {this.state.date}
+              onChange= {this.handleChange}
+              />
 
-
+    <input type="submit" /> 
 
      </form>
   </div>
-)
-}
-
-
-
-
+)}
 }
 
 
@@ -42,13 +58,3 @@ return(
 export default CreateTodo;
 
 
-
-
-
-
-
-
-
-// * <input className="titleInput" type="text" 
-//   placeholder="Add a task" maxLength="50"
-// onChange={this.handleChange} />
