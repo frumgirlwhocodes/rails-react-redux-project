@@ -1,21 +1,23 @@
 import { LOAD_TODOS, ADD_TODO, TOGGLE_TODO,  DELETE_TODO } from '../actions/actionTypes'
-import cuid from 'cuid';
-export const cuidFn = cuid;
 
-function todosReducer(state = { todos:[] }, action) 
+
+function todosReducer(state = [], action) 
 {
     switch(action.type) {
         case LOAD_TODOS:
             return action.todos;
 
-        case ADD_TODO:
-  const todo = { title: action.title, 
-                date: action.date,
-                id: cuidFn() }
-      return {
-                ...state, 
-                todos: [ ...state.todos, todo]
-                }
+            case ADD_TODO:
+                return [
+                    ...state,
+                    {
+                        id: action.id,
+                        title: action.title,
+                        date: action.date,
+                        done: false
+                    }
+                ];
+    
     
     
         case TOGGLE_TODO:

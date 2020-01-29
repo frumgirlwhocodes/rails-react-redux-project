@@ -10,7 +10,7 @@ import {connect} from 'react-redux'
 class TodosContainer extends Componenet {
 
 componentDidMount() {
-    this.props.getTodos();
+    this.props.getTodos()
     }
 
 
@@ -26,13 +26,14 @@ componentDidMount() {
 
 const mapStateToProps = (state) => {
     return {
-      todos: state.todos, 
+      todos: state.todos
  
     }
   }
 
   const mapDispatchToProps = dispatch => {
     return {
+      getTodos: () => dispatch(getTodos()),
       addTodo: (todo) => dispatch(createTodo(todo.title, todo.date)),
       delete: id => dispatch(deleteTodo(id)), 
       update: () => dispatch(updateTodo())

@@ -14,12 +14,12 @@ const Todo = props => {
     return ( 
     <div>
     <ul>
-      <li className = "todo" key ={props.todo.id}>
-     <lable className = "todoTitle" >{props.todo.title} </lable> 
-      <lable className= "todoDate">  {props.todo.date}</lable>   
+      <li className = "todo" key ={todo.id}>
+     <lable className = "todoTitle" >{todo.title} </lable> 
+      <lable className= "todoDate">  {todo.date}</lable>   
       <input className="taskCheckbox" type="checkbox" 
                 checked={todo.done} onChange={(e) => this.updateTodo(e, todo.id)} />  
-      <button className = "deleteTask" onClick={() => this.delete(todo.id)}>Delete</button>
+      <button className = "deleteTask" onClick={() => this.deleteTodo(todo.id)}>Delete</button>
       </li> 
       </ul> 
     </div>

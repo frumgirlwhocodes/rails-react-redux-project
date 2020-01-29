@@ -14,9 +14,10 @@ class TodoList extends Component {
 
 render(){
     return (
-        <div className = "list">\
+        <div className = "list">
+          <ul className = "todoList">
       {this.renderTodos()}
-    
+    </ul> 
     </div>
     )
 }
