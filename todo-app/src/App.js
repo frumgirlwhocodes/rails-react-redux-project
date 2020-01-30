@@ -7,7 +7,7 @@ class App extends Component {
   render() {
   return (
     <div className="todoHeader">
-      <h1> List of Tasks </h1>
+      <h1> What has to be done  </h1>
      
  < TodosContainer />
 

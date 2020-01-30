@@ -121,3 +121,10 @@ input[placeholder] {
 	border-radius: 25px;
 	box-sizing: border-box;
 }
+
+.todoInput .dateInput {
+	padding: 6px;
+	width: 50%;
+	border-radius: 25px;
+	box-sizing: border-box;
+}

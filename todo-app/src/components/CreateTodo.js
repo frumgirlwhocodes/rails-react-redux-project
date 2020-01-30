@@ -28,23 +28,24 @@ render() {
 return(
 
   <div className= "todoInput"> 
-     <h1> Add a To DO </h1>
+    
      <form onSubmit = {this.handleSubmit} >
-
+<div>
        <input className= "titleInput"
               type= "text"
               placeholder ="Add a task"
               maxLength= "60"
               value = {this.state.title}
               onChange= {this.handleChange}
-              />
-       
+              /> <br></br>
+       </div>
        <input className= "dateInput"
               type= "text"
               placeholder ="date of task"
               value = {this.state.date}
               onChange= {this.handleChange}
-              />
+              /> 
+              <br></br>
 
     <input type="submit" /> 
 
