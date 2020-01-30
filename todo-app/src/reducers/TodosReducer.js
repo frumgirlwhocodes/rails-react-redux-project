@@ -1,7 +1,7 @@
 import { LOAD_TODOS, ADD_TODO, TOGGLE_TODO,  DELETE_TODO } from '../actions/actionTypes'
 
 
-function todosReducer(state = {todos: [] }, action) 
+function todosReducer(state = [] , action) 
 {
     switch(action.type) {
         case LOAD_TODOS:
@@ -21,13 +21,13 @@ function todosReducer(state = {todos: [] }, action)
     
     
         case TOGGLE_TODO:
-            return state.todos.map(todo => (todo.id === action.id) 
+            return state.map(todo => (todo.id === action.id) 
                   ? {...todo, done: !todo.done}
                   : todo
             );
 
         case DELETE_TODO:
-            return { ...state, todos: state.todos.filter(todo => todo.id !== action.id)}
+            return state.filter(todo => todo.id !== action.id);
 
         default:
             return state;    

@@ -7,7 +7,7 @@ class Todo extends Component {
     }
  
  deleteTodo= (id) => {
-      this.props.deleteTodo(id)
+      this.props.delete(id)
   }    
 render(){
  const todo= this.props.todo 
@@ -15,11 +15,11 @@ render(){
     <div>
     <ul>
       <li className = "todo" key ={todo.id}>
-     <lable className = "todoTitle" >{todo.title} </lable> 
-      <lable className= "todoDate">  {todo.date}</lable>   
       <input className="taskCheckbox" type="checkbox" 
                 checked={todo.done} onChange={(e) => this.updateTodo(e, todo.id)} />  
-      <button className = "deleteTask" onClick={() => this.deleteTodo(todo.id)}>Delete</button>
+    <p> <lable className = "todoTitle" >{todo.title} </lable> </p>
+  <p> For:    <lable className= "todoDate">  {todo.date}</lable> </p>
+  <span> <button className = "deleteTask" onClick={() => this.deleteTodo(todo.id)}>Delete</button></span>
       </li> 
       </ul> 
     </div>

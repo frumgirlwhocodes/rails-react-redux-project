@@ -1,5 +1,4 @@
 import React, { Component } from 'react'
-import update from 'immutability-helper'
 import CreateTodo from "../components/CreateTodo"
 import { getTodos} from '../actions/todosActions'
 import { createTodo} from '../actions/todosActions'
@@ -39,7 +38,7 @@ const mapStateToProps = (state) => {
       getTodos: () => dispatch(getTodos()),
       placeTodo: (todo) => dispatch(createTodo(todo.title, todo.date)),
       delete: id => dispatch(deleteTodo(id)), 
-      update: () => dispatch(updateTodo())
+      update: id => dispatch(updateTodo(id))
     
     }
   }

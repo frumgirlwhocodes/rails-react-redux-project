@@ -106,7 +106,7 @@ input[placeholder] {
 	border-radius: 5px;
 }
 .todoHeader {
-	color: black;
+	color: rgb(212, 67, 67);
 	padding: 5px;
 	text-align: center;
 	font-family: Tahoma, sans-serif;
@@ -122,9 +122,18 @@ input[placeholder] {
 	box-sizing: border-box;
 }
 
-.todoInput .dateInput {
+/* .todoInput .dateInput {
 	padding: 6px;
 	width: 50%;
 	border-radius: 25px;
-	box-sizing: border-box;
+	box-sizing: content-box	;
+} */
+
+.list {
+	position: absolute;
+	bottom: 50px;
+	top: 160px;
+	right: 0;
+	left: 0;
+	overflow: auto;
 }

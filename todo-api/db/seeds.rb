@@ -6,3 +6,4 @@
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
 Todo.create(title: "Buy food: milk, bread, fruits", date: "November 23",done: false)
+Todo.create(title: "Imagine Dragons tickets", date: "December 1" , done: false)

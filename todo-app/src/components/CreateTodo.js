@@ -29,25 +29,23 @@ return(
 
   <div className= "todoInput"> 
     
-     <form onSubmit = {this.handleSubmit} >
+     <form >
 <div>
        <input className= "titleInput"
               type= "text"
               placeholder ="Add a task"
               maxLength= "60"
-              value = {this.state.title}
-              onChange= {this.handleChange}
+             onKeyPress= {this.handleChange}
               /> <br></br>
        </div>
        <input className= "dateInput"
               type= "text"
               placeholder ="date of task"
-              value = {this.state.date}
-              onChange= {this.handleChange}
+              onKeyPress= {this.handleChange}
               /> 
               <br></br>
 
-    <input type="submit" /> 
+    <input type="submit" onKeyPress = {this.handleSubmit} /> 
 
      </form>
   </div>
