@@ -14,6 +14,6 @@ export function loadTodos(todos) {
 
 
   
-  export function deleteTodo(id) {
+  export function deleteTodos(id) {
     return { type: DELETE_TODO, id: id  }
   }

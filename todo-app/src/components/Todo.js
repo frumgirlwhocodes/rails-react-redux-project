@@ -1,6 +1,6 @@
-import React from 'react';
+import React, {Component} from 'react';
 
-const Todo = props => { 
+class Todo extends Component { 
 
   updateTodo = (e, id) => {
         this.props.updateTodo({id: id, checked: e.target.checked})
@@ -9,7 +9,7 @@ const Todo = props => {
  deleteTodo= (id) => {
       this.props.deleteTodo(id)
   }    
-
+render(){
  const todo= this.props.todo 
     return ( 
     <div>
@@ -24,7 +24,9 @@ const Todo = props => {
       </ul> 
     </div>
   )
+    }
 
 };
+
 
 export default Todo;

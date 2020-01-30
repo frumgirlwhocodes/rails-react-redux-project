@@ -6,16 +6,15 @@ import About from './components/About';
 import * as serviceWorker from './serviceWorker';
 import { Provider } from 'react-redux';
 import { createStore, applyMiddleware } from 'redux';
-import reduxThunk from 'redux-thunk';
+import thunk from 'redux-thunk';
 import rootReducer from './reducers/RootReducer';
-import { composeWithDevTools } from 'redux-devtools-extension';
 import NavBar from './components/NavBar'
 import { BrowserRouter as Router, Route, Switch } from 'react-router-dom'
 
 
 const store = createStore(
   rootReducer,
-  composeWithDevTools(applyMiddleware(reduxThunk))
+  applyMiddleware(thunk)
 );
 
 

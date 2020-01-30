@@ -1,5 +1,5 @@
 
-import { loadTodos, addTodo, toggleTodo, deleteTodo } from '../actions/actionCreators'
+import { loadTodos, addTodo, toggleTodo, deleteTodos } from '../actions/actionCreators'
 import axios from 'axios'
 
 
@@ -40,7 +40,7 @@ export const  updateTodo = (params) => {
    return() => {
     axios.delete(`/api/v1/todos/${id}`)
     .then(response => {
-      this.props.dispatch(deleteTodo(id))
+      this.props.dispatch(deleteTodos(id))
     })
     .catch(error => console.log(error))
   }

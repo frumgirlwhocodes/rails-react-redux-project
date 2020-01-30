@@ -9,9 +9,8 @@ class App extends Component {
     <div className="todoHeader">
       <h1> List of Tasks </h1>
      
-  <p>
-     < TodosContainer />
-</p>
+ < TodosContainer />
+
     </div>
   );
 }

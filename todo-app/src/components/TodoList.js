@@ -1,14 +1,12 @@
-import React from 'react'
-import Todo from './components/Todo'
+import React, {Component}  from 'react'
+import Todo from '../components/Todo'
 
 
 class TodoList extends Component {
-	constructor(props) {
-		super(props);
-    }
 
     renderTodos = () => {
-        return this.props.todos.map(todo => <Todo delete={this.props.delete} key={todo.id} todo={todo} id={todo.id} 
+      const todos = this.props.todos;
+        return todos.map( (todo) => <Todo delete={this.props.delete} key={todo.id} todo={todo} id={todo.id} 
             updateTodo={this.props.updateTodo} />)
       }
 

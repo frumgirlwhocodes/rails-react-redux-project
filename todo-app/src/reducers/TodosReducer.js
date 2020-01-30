@@ -1,7 +1,7 @@
 import { LOAD_TODOS, ADD_TODO, TOGGLE_TODO,  DELETE_TODO } from '../actions/actionTypes'
 
 
-function todosReducer(state = {todos: [],}, action) 
+function todosReducer(state = {todos: [] }, action) 
 {
     switch(action.type) {
         case LOAD_TODOS:
