@@ -1,5 +1,7 @@
 
 import React, { Component } from 'react'
+import { createTodo} from '../actions/todosActions'
+import { connect } from 'react-redux'
 
 class CreateTodo extends Component {
 constructor(props){
@@ -15,12 +17,14 @@ handleSubmit = (event) => {
    this.props.addTodo({
    title: this.state.title, 
    date: this.state.date  })
+   this.setState( { title: ' ', 
+    date: ''})
    
  }
 
  handleChange = event => {
   this.setState({
-    [event.target.id]: event.target.value
+    [event.target.name]: event.target.value
  });
 }
 
@@ -29,33 +33,39 @@ return(
 
   <div className= "todoInput"> 
     
-     <form onSubmit = {this.handleSubmit} >
+     <form onSubmit = {(event) => this.handleSubmit(event)} >
 <div>
+<label>Add todo</label><br></br>
        <input className= "titleInput"
               type= "text"
+              name ="title"
               placeholder ="Add a task"
               maxLength= "60"
-              // value = {this.state.title}
+              value = {this.state.title}
             onChange= {this.handleChange}
               /> <br></br>
        </div>
        <input className= "dateInput"
               type= "text"
+              name="date"
               placeholder ="date of task"
-              // value={this.state.date}
+              value={this.state.date}
               onChange = {this.handleChange}
               /> 
               <br></br>
 
-    <input type="submit" value="Submit" /> 
+              <button type="submit" className="btn btn-default">Add</button>
 
      </form>
   </div>
 )}
 }
 
+const mapDispatchToProps = dispatch => ({
+  addTodo: (title, date)=> dispatch(createTodo(title, date))
+})
 
+export default connect(null, mapDispatchToProps)(CreateTodo);
 
-export default CreateTodo;
 
 

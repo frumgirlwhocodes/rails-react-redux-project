@@ -103,7 +103,7 @@ input[placeholder] {
 	height: 600px;
 	position: relative;
 	margin: 0 auto;
-	border-radius: 5px;
+	border-radius: 6px;
 }
 .todoHeader {
 	color: rgb(212, 67, 67);
@@ -116,9 +116,9 @@ input[placeholder] {
 }
 
 .todoInput .titleInput {
-	padding: 10px;
-	width: 100%;
-	border-radius: 25px;
+	padding: 5px;
+	width: 50%;
+	border-radius: 15px;
 	box-sizing: border-box;
 }
 
