@@ -29,7 +29,7 @@ import axios from 'axios'
 export const  updateTodo = (params) => { 
   return(dispatch) => {
     axios.put(`http://localhost:3000/api/v1/todos/${params.id}`, {todo: {done: params.checked}})
-    .then(response => {
+    .then(() => {
     dispatch(toggleTodo(params.id))
     })
     .catch(error => console.log(error))      

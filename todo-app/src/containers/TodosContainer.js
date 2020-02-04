@@ -36,9 +36,9 @@ const mapStateToProps = (state) => {
   const mapDispatchToProps = dispatch => {
     return {
       getTodos: () => dispatch(getTodos()),
-      placeTodo: (todo) => dispatch(createTodo(todo.title, todo.date)),
+      placeTodo: (title, date) => dispatch(createTodo(title, date)),
       delete: id => dispatch(deleteTodo(id)), 
-      update: id => dispatch(updateTodo(id))
+      update: (id, checked) => dispatch(updateTodo(id, checked))
     
     }
   }
