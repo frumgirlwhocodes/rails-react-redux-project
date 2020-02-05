@@ -34,7 +34,7 @@ const mapStateToProps = (state) => {
     return {
       getTodos: () => dispatch(getTodos()),
       delete: id => dispatch(deleteTodo(id)), 
-      update: (id, checked) => dispatch(updateTodo(id, checked))
+      update: (id) => dispatch(updateTodo(id))
     
     }
   }

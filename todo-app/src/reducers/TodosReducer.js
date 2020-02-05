@@ -8,7 +8,8 @@ function todosReducer(state = [] , action)
             return action.todos;
 
             case ADD_TODO:
-                return [
+               
+                return  [
                     ...state,
                     {
                         id: action.id,
@@ -16,6 +17,7 @@ function todosReducer(state = [] , action)
                         date: action.date,
                         done: false
                     }
+                    
                 ];
     
     
