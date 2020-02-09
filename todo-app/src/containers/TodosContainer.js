@@ -8,16 +8,19 @@ import {connect} from 'react-redux'
 
 
 class TodosContainer extends Component {
+  
+  
 
 componentDidMount() {
+
     this.props.getTodos()
     }
-
 
 
     render() {
         return (
           <div className= "container">
+            <h1> What has to be done  </h1>
               <TodoList todos ={this.props.todos} delete={this.props.delete} update = {this.props.update}/>
               </div> 
         )}
@@ -30,11 +33,16 @@ const mapStateToProps = (state) => {
     }
   }
 
-  const mapDispatchToProps = dispatch => {
+  const mapDispatchToProps = (dispatch) => {
     return {
       getTodos: () => dispatch(getTodos()),
       delete: id => dispatch(deleteTodo(id)), 
-      update: (id) => dispatch(updateTodo(id))
+      update: (params) => {
+
+        console.log(params)
+        
+         dispatch(updateTodo(params))}
+    
     
     }
   }

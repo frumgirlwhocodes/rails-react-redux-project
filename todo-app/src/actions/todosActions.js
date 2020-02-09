@@ -15,6 +15,8 @@ import axios from 'axios'
 
   
   export const createTodo =( title, date ) => {
+    console.log(title)
+    console.log(date)
     return(dispatch) => {
     if (!(title === '')) {
 		axios.post('http://localhost:3000/api/v1/todos', {todo: {title: title, date:date}})

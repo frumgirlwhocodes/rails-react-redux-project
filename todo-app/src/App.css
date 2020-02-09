@@ -61,7 +61,7 @@ input.taskCheckbox {
 	position: relative;
 	float: left;
 	margin-right: 10px;
-	-webkit-appearance: none;
+	-webkit-appearance: none ;
 	width: 20px;
 	height: 20px;
 	border: 1px solid #ccc;
@@ -89,7 +89,7 @@ input.taskCheckbox + label.todoTitle + label.todoDate {
 	color: black;
 }
 
-input.taskCheckbox:checked + label.todoTitle + label.todoDate {
+input.taskCheckbox:checked +  p.tite + p.forDate + label.todoTitle + label.todoDate {
 	text-decoration: line-through;
 	color: #656565;
 }
@@ -99,11 +99,11 @@ input[placeholder] {
 }
 
 .container {
-	width: 40%;
-	height: 600px;
+	width: 50%;
+	height: 800px;
 	position: relative;
 	margin: 0 auto;
-	border-radius: 6px;
+	border-radius: 10px;
 }
 .todoHeader {
 	color: rgb(212, 67, 67);

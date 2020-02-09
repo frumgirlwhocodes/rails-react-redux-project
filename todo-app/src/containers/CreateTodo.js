@@ -35,7 +35,7 @@ return(
     
      <form onSubmit = {(event) => this.handleSubmit(event)} >
 <div>
-<label>Add todo</label><br></br>
+<h3> Add Todo</h3><br></br>
        <input className= "titleInput"
               type= "text"
               name ="title"
@@ -62,7 +62,10 @@ return(
 }
 
 const mapDispatchToProps = dispatch => ({
-  addTodo: (title, date)=> dispatch(createTodo(title, date))
+  addTodo: ({title, date})=> {
+    console.log(title)
+    console.log(date)
+    dispatch(createTodo(title, date))}
 })
 
 export default connect(null, mapDispatchToProps)(CreateTodo);
