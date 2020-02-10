@@ -23,11 +23,15 @@ function todosReducer(state = [] , action)
     
     
         case TOGGLE_TODO:
-            return state.map(todo => (todo.id === action.id) 
+            console.log(action)
+            const newState=  state.map(todo => {
+                console.log(todo.id === action.index)
+             return   (todo.id === action.index) 
                   ? {...todo, done: !todo.done}
                   : todo
-            );
-
+             } );
+            console.log(newState)
+           return newState 
         case DELETE_TODO:
             return state.filter(todo => todo.id !== action.id);
 
