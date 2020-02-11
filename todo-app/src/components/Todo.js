@@ -6,6 +6,7 @@ class Todo extends Component {
   updateTodo = (e, id) => {
     console.log(id)
     console.log(e.target.checked)
+
   
         this.props.updateTodo( {id: id, checked: e.target.checked})
     }

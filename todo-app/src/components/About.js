@@ -5,6 +5,7 @@ class About extends Component {
         return (
             <div className="container">
                 <div className="header">
+                    
                     <h1>About</h1>
                     <p> How would you like all your tasks in one easy to use app? </p>
                     <p> Well now you can </p>

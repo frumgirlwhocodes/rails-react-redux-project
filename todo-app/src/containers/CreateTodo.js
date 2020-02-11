@@ -36,7 +36,7 @@ return(
      <form onSubmit = {(event) => this.handleSubmit(event)} >
 <div>
 <h3> Add Todo</h3><br></br>
-       <input className= "titleInput"
+       Title: <input className= "titleInput"
               type= "text"
               name ="title"
               placeholder ="Add a task"
@@ -45,7 +45,7 @@ return(
             onChange= {this.handleChange}
               /> <br></br>
        </div>
-       <input className= "dateInput"
+       Date: <input className= "dateInput"
               type= "text"
               name="date"
               placeholder ="date of task"
@@ -54,7 +54,7 @@ return(
               /> 
               <br></br>
 
-              <button type="submit" className="btn btn-default">Add</button>
+              <button type="submit" className="btn btn-default">Submit Task </button>
 
      </form>
   </div>
